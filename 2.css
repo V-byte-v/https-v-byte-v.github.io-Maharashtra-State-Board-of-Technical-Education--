@@ -1,0 +1,60 @@
+/* Full Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Background Container for Particles */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Canvas for Particle Effect */
+canvas {
+    display: block;
+}
+
+/* Container for 3D Animation */
+.animated-container {
+    perspective: 1000px;
+    text-align: center;
+}
+
+/* 3D Animated Text */
+.animated-text {
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: textAnimation 3s infinite;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7), -3px -3px 10px rgba(255, 255, 255, 0.2);
+    transform: rotateX(20deg) rotateY(15deg);
+}
+
+/* Keyframe Animation */
+@keyframes textAnimation {
+    0% {
+        transform: rotateX(20deg) rotateY(15deg);
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7), -3px -3px 10px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        transform: rotateX(-20deg) rotateY(-15deg);
+        text-shadow: -3px -3px 15px rgba(0, 0, 0, 0.5), 3px 3px 15px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        transform: rotateX(20deg) rotateY(15deg);
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7), -3px -3px 10px rgba(255, 255, 255, 0.2);
+    }
+}
